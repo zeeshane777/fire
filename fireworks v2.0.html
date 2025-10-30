@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fireworks v2.0.css">
+    <link rel="stylesheet" href="style.css">
+    <title>FireWorks v2.0</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <!-- Bouton cliquable -->
+    <button id="startButton">Clique-moi</button>
+    <div id="message"> T'AS DE BEAUX YEUX TU SAIS!</div>
+
+    <div class="block-audio">
+      <!-- Tes balises audio inchangées -->
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp1.mp3" controls></audio>
+      <audio class="exp" src="http://static.dar-studio.com/codepen/audio/firework/exp2.mp3" controls></audio>
+      <audio class="launch" src="http://static.dar-studio.com/codepen/audio/firework/launch1.mp3" controls></audio>
+      <!-- ... (garde les autres audios comme avant) ... -->
+    </div>
+
+    <script src="jQuery.js"></script>
+    <script src="fireworks v2.0.js"></script>
+
+    <script>
+      const button = document.getElementById('startButton');
+      const message = document.getElementById('message');
+
+      button.addEventListener('click', () => {
+        button.style.display = 'none'; // cache le bouton
+        message.classList.add('show'); // affiche le message
+      });
+    </script>
+  </body>
+</html>
